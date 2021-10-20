@@ -1,24 +1,19 @@
-#include <stdio.h>
-int main() {
-    int num, originalNum, remainder, result = 0;
-    printf("Enter a three-digit integer: ");
-    scanf("%d", &num);
-    originalNum = num;
-
-    while (originalNum != 0) {
-       // remainder contains the last digit
-        remainder = originalNum % 10;
-
-       result += remainder * remainder * remainder;
-
-       // removing last digit from the orignal number
-       originalNum /= 10;
-    }
-
-    if (result == num)
-        printf("%d is an Armstrong number.", num);
-    else
-        printf("%d is not an Armstrong number.", num);
-
-    return 0;
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i,m=0,sum=0,n;
+	printf("enter no.");
+	scanf("%d",&n);
+	m=n;
+	while(m!=0)
+	{
+		int a=m%10;
+		sum=sum+pow(a,3);
+		m=m/10;
+	}
+	if(sum==n)
+	printf("armstrong no.");
+	else
+	printf("not a armstrong no.");
 }
